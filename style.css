@@ -1,0 +1,28 @@
+#articles, #articles2{
+    display:none;
+    border: 1px solid;
+    border-color:black;
+    border-radius: 5px;
+}
+
+#liste, #liste2{
+    color: white;
+    font-weight: bold;
+    padding : 0, 15px, 0, 15px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin: 5px;
+}
+
+li:hover{
+    background-color: darkblue;
+}
+
+.qte{
+    width: 20%;
+}
