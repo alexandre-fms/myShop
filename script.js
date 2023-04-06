@@ -56,6 +56,7 @@ function generateTable(data) {
                 let cellText = document.createTextNode(element);
                 cell.appendChild(cellText);
                 tr.appendChild(cell);
+                tr.setAttribute("name", "article");
                 tr.firstChild.innerHTML = i + 1;
             });
             let cellInput = document.createElement("td");
@@ -75,6 +76,7 @@ function generateTable(data) {
                     let cellText = document.createTextNode(element);
                     cell.appendChild(cellText);
                     tr.appendChild(cell);
+                    tr.setAttribute("name", "article");
                     tr.firstChild.innerHTML = i + 1;
                 });
                 let cellInput = document.createElement("td");
@@ -95,6 +97,7 @@ function generateTable(data) {
                     let cellText = document.createTextNode(element);
                     cell.appendChild(cellText);
                     tr.appendChild(cell);
+                    tr.setAttribute("name", "article");
                     tr.firstChild.innerHTML = i + 1;
                 });
                 let cellInput = document.createElement("td");
@@ -115,6 +118,7 @@ function generateTable(data) {
                     let cellText = document.createTextNode(element);
                     cell.appendChild(cellText);
                     tr.appendChild(cell);
+                    tr.setAttribute("name", "article");
                     tr.firstChild.innerHTML = i + 1;
                 });
                 let cellInput = document.createElement("td");
@@ -189,7 +193,12 @@ goPc.addEventListener("click", function () {
 
 function addToCart() {
 
-    alert("au secours");
+    let mycel = document.getElementsByName("article");
+    mycel.forEach(element => {
+        console.log(element.getElementsByTagName("td").data);
+    })
+    //let content = document.getElementsByName("article");
+
 }
 
 
