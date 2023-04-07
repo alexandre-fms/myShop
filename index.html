@@ -56,12 +56,17 @@
         <div class="row">
             <div id="cart" class="col-7">
                 <!--todo tableau panier-->
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary mt-3" onclick="popForm()">étape suivante</button>
+                </div>
+
             </div>
 
             <form id="formOrder" class="col-5 g-3">
                 <div class="col-md-12">
                     <label for="inputName" class="form-label">Nom</label>
-                    <input type="text" class="form-control bg-info" id="inputName">
+                    <input type="text" class="form-control bg-info" id="inputName" placeholder="Tout le monde a un nom">
                 </div>
 
                 <div class="col-12">
@@ -81,7 +86,7 @@
 
 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary mt-3">Commander</button>
+                    <button type="submit" class="btn btn-primary mt-3" onclick="orderValidation()">Commander</button>
                 </div>
             </form>
         </div>

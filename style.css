@@ -27,9 +27,11 @@ li:hover{
     width: 20%;
 }
 
-form > div > input{
-    border: 1px solid;
-    border-color:black;
-    border-radius: 5px;
-    padding: 5px;
+#formOrder {
+visibility: hidden;
+}
+
+h3{
+    padding-left: 15px;
+    padding-right: 15px;
 }

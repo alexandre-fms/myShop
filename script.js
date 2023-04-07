@@ -202,6 +202,15 @@ function addToCart() {
 }
 
 
+function popForm(){
+    document.getElementById("formOrder").style.visibility = "visible";
+}
 
+function orderValidation(){
+let name = document.getElementById("inputName").value;
+let address = document.getElementById("inputAddress").value;
+let phoneNumber = document.getElementById("inputPhoneNumber").value;
+let email = document.getElementById("inputEmail4").value;
 
-
+    alert("Félicitations pour votre commande Monsieur//madame "+ name +".\n    Cependant, nous rencontrons une erreur avec notre base de données.\n    En effet, votre compte sera bien débité mais vous ne recevrais pas les articles commandés à l'adresse : "+address+".\n\n N'essayez pas de nous contacter, votre numéro "+ phoneNumber+" et votre mail "+email+" ont été bloqués par nos services.\n\n   Encore merci de votre commande et à bientôt.");
+}
