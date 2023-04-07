@@ -59,13 +59,8 @@ function generateTable(data) {
                 tr.setAttribute("name", "article");
                 tr.firstChild.innerHTML = i + 1;
             });
-            let cellInput = document.createElement("td");
-            let input = document.createElement("input");
-            input.className = "qte";
-            input.type = "number";
-            input.style.width = "50%";
-            cellInput.appendChild(input);
-            tr.appendChild(cellInput);
+            
+            tr.appendChild(inputQuantity());
             tbody.appendChild(tr);
         }
         if (data === "phone") {
@@ -79,13 +74,7 @@ function generateTable(data) {
                     tr.setAttribute("name", "article");
                     tr.firstChild.innerHTML = i + 1;
                 });
-                let cellInput = document.createElement("td");
-                let input = document.createElement("input");
-                input.className = "qte";
-                input.type = "number";
-                input.style.width = "50%";
-                cellInput.appendChild(input);
-                tr.appendChild(cellInput);
+                tr.appendChild(inputQuantity());
                 tbody.appendChild(tr);
             }
         }
@@ -100,13 +89,7 @@ function generateTable(data) {
                     tr.setAttribute("name", "article");
                     tr.firstChild.innerHTML = i + 1;
                 });
-                let cellInput = document.createElement("td");
-                let input = document.createElement("input");
-                input.className = "qte";
-                input.type = "number";
-                input.style.width = "50%";
-                cellInput.appendChild(input);
-                tr.appendChild(cellInput);
+                tr.appendChild(inputQuantity());
                 tbody.appendChild(tr);
             }
         }
@@ -121,13 +104,7 @@ function generateTable(data) {
                     tr.setAttribute("name", "article");
                     tr.firstChild.innerHTML = i + 1;
                 });
-                let cellInput = document.createElement("td");
-                let input = document.createElement("input");
-                input.className = "qte";
-                input.type = "number";
-                input.style.width = "50%";
-                cellInput.appendChild(input);
-                tr.appendChild(cellInput);
+                tr.appendChild(inputQuantity());
                 tbody.appendChild(tr);
             }
         }
@@ -139,6 +116,18 @@ function generateTable(data) {
     ligneTabArticles.appendChild(div);
 }
 
+//creation de td contenant un input pour saisir une quantité
+function inputQuantity(){
+    let cellInput = document.createElement("td");
+    let input = document.createElement("input");
+    input.className = "qte";
+    input.type = "number";
+    input.style.width = "50%";
+    cellInput.appendChild(input);
+    return cellInput;
+}
+
+//creation du bouton pour créer le panier
 function buttonAddToCart() {
     let buttonAddToCart = document.createElement("button");
     buttonAddToCart.setAttribute("id", "addToCart");
@@ -147,6 +136,23 @@ function buttonAddToCart() {
     buttonAddToCart.innerHTML = "Ajouter au panier";
     return buttonAddToCart;
 }
+
+
+
+function addToCart() {
+    document.getElementById("nextStep").style.visibility = "visible";
+    document.getElementById("sorry").style.visibility = "visible";
+    document.getElementById("sorry2").style.visibility = "visible";
+
+    let trValue = document.getElementsByName("article");
+    mycel.forEach(element => {
+        console.log(element.getElementsByTagName("td"));
+    })
+    //let content = document.getElementsByName("article");
+
+}
+
+
 
 let goall = document.getElementById("all");
 let goPhone = document.getElementById("phones");
@@ -191,22 +197,13 @@ goPc.addEventListener("click", function () {
 });
 
 
-function addToCart() {
 
-    let mycel = document.getElementsByName("article");
-    mycel.forEach(element => {
-        console.log(element.getElementsByTagName("td").data);
-    })
-    //let content = document.getElementsByName("article");
-
-}
-
-
+//affiche le formulaire
 function popForm() {
     document.getElementById("formOrder").style.visibility = "visible";
 }
 
-
+//valide le formulaire
 document.addEventListener("submit", function(event){
     let name = document.getElementById("inputName").value;
     let address = document.getElementById("inputAddress").value;
