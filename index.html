@@ -66,27 +66,27 @@
             <form id="formOrder" class="col-5 g-3">
                 <div class="col-md-12">
                     <label for="inputName" class="form-label">Nom</label>
-                    <input type="text" class="form-control bg-info" id="inputName" placeholder="Tout le monde a un nom">
+                    <input type="text" class="form-control bg-info" id="inputName" placeholder="Tout le monde a un nom" required aria-required="true">
                 </div>
 
                 <div class="col-12">
                     <label for="inputAddress" class="form-label">Adresse</label>
-                    <input type="text" class="form-control bg-info" id="inputAddress" placeholder="votre adresse">
+                    <input type="text" class="form-control bg-info" id="inputAddress" placeholder="votre adresse" required aria-required="true">
                 </div>
 
                 <div class="col-md-12">
                     <label for="inputPhoneNumber" class="form-label">Téléphone</label>
-                    <input type="text" class="form-control bg-info" id="inputPhoneNumber" placeholder="votre 06">
+                    <input type="text" class="form-control bg-info" id="inputPhoneNumber" placeholder="votre 06" required aria-required="true">
                 </div>
 
                 <div class="col-md-12">
                     <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control bg-info" id="inputEmail4" placeholder="kevin@leteubet.fr">
+                    <input type="email" class="form-control bg-info" id="inputEmail4" placeholder="kevin@leteubet.fr" required aria-required="true">
                 </div>
 
 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary mt-3" onclick="orderValidation()">Commander</button>
+                    <button type="submit" class="btn btn-primary mt-3">Commander</button>
                 </div>
             </form>
         </div>
