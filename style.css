@@ -26,3 +26,10 @@ li:hover{
 .qte{
     width: 20%;
 }
+
+form > div > input{
+    border: 1px solid;
+    border-color:black;
+    border-radius: 5px;
+    padding: 5px;
+}
